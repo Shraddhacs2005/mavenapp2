@@ -5,11 +5,6 @@ pipeline {
 		jdk 'jdk'
 		}
 		stages {
-			stage('Checkout') {
-				steps {
-					git branch: ‘main’, url: 'https://github.com/Shraddhacs2005/mavenapp2'
-				}
-			}
 			stage('Build') {
 				steps {
 					sh 'mvn clean package'
